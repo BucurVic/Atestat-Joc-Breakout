@@ -83,7 +83,7 @@
             this.Controls.Add(this.jucator);
             this.Controls.Add(this.txtScor);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Breakout";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TastaJos);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TastaSus);

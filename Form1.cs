@@ -166,7 +166,7 @@ namespace AtestatBreakoutio
             if (e.KeyCode == Keys.P)
             {
                 timerjoc.Stop();
-                txtScor.ForeColor = Color.Red;
+                txtScor.ForeColor = Color.Orange;
                 txtScor.Text = "Scor : " + scor + "  Enter - Continua";
             }
             if (e.KeyCode == Keys.Escape)
