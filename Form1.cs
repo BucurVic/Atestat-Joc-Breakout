@@ -22,6 +22,7 @@ namespace AtestatBreakoutio
         int bilax;
         int bilay;
         int vitezajucator;
+        int ok = 0;
 
         Random rnd = new Random();
 
@@ -35,7 +36,6 @@ namespace AtestatBreakoutio
 
         private void configurarejoc ()
         {
-            scor = 0;
             bilax = 5;
             bilay = 5;
             vitezajucator = 12;
@@ -44,8 +44,6 @@ namespace AtestatBreakoutio
             bila.Top = 348;
             jucator.Left = 527;
 
-            timerjoc.Start();
-
             foreach (Control x in this.Controls)
                 if ((string)x.Tag == "blocuri")
                     x.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
@@ -53,7 +51,7 @@ namespace AtestatBreakoutio
         
         private void mainGameTimerEvent(object sender, EventArgs e)
         {
-            txtScor.Text = "Scor : " + scor;
+            txtScor.Text = "Scor : " + scor + "  P - Pauza";
             if (lastanga == true && jucator.Left > 0)
                 jucator.Left -= vitezajucator;
             if (ladreapta == true && jucator.Left < 1074)
@@ -84,17 +82,20 @@ namespace AtestatBreakoutio
                     }
             if (bila.Top > 743)
             {
-                terminarejoc("Ai pierdut!  Enter - Din Nou    Escape - Iesire");
+                terminarejoc("Ai pierdut!   Enter - Din Nou    Escape - Iesire");
                 txtScor.ForeColor = Color.Red;
+                scor = 0;
+                ok = 0;
             }
-            if (scor == 15 || scor == 30)
+            if (scor == 15 && ok == 0)
             {
-                terminarejoc("Ai castigat!  Enter - Tura Noua    Escape - Iesire");
+                terminarejoc("Ai castigat!   Enter - Tura Noua    Escape - Iesire");
                 txtScor.ForeColor = Color.LimeGreen;
+                ok = 1;
             }
-            if (scor == 45)
+            if (scor == 30)
             {
-                terminarejoc("Bravo, ai terminat jocul!  Escape - Iesire");
+                terminarejoc("Bravo, ai terminat jocul!   Escape - Iesire");
                 txtScor.ForeColor = Color.LimeGreen;
             }
         }
@@ -157,19 +158,20 @@ namespace AtestatBreakoutio
                 ladreapta = false;
             if (e.KeyCode == Keys.Enter && sfarsitjoc == true)
                 eliminareblocuri();
+            if (e.KeyCode == Keys.Enter)
+            {
+                timerjoc.Start();
+                txtScor.ForeColor = Color.White; 
+            }
+            if (e.KeyCode == Keys.P)
+            {
+                timerjoc.Stop();
+                txtScor.ForeColor = Color.Red;
+                txtScor.Text = "Scor : " + scor + "  Enter - Continua";
+            }
             if (e.KeyCode == Keys.Escape)
                 Application.Exit();
         }
-
-
-
-
-
-
-
-
-
-
 
 
         private void Form1_Load(object sender, EventArgs e)

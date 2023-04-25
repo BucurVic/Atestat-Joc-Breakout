@@ -45,9 +45,9 @@
             this.txtScor.ForeColor = System.Drawing.Color.White;
             this.txtScor.Location = new System.Drawing.Point(12, 9);
             this.txtScor.Name = "txtScor";
-            this.txtScor.Size = new System.Drawing.Size(107, 48);
+            this.txtScor.Size = new System.Drawing.Size(367, 48);
             this.txtScor.TabIndex = 0;
-            this.txtScor.Text = "Scor :";
+            this.txtScor.Text = "Scor :   Enter - Incepe";
             this.txtScor.Click += new System.EventHandler(this.txtScor_Click);
             // 
             // jucator
