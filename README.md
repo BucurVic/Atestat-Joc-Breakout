@@ -88,19 +88,8 @@ Breakoutio/
 
 ---
 
-## 📌 Posibile îmbunătățiri
-
-- Niveluri multiple cu dificultate crescută
-- Power-up-uri (viteza bilei, extinderea paletei etc.)
-- Efecte sonore
-- Salvarea scorului maxim
-
----
-
 ## 🛠️ Creat pentru
 
 Acest proiect a fost realizat ca parte a **atestatului la informatică** și este ideal pentru a învăța elemente de bază ale programării orientate pe evenimente și ale interfeței grafice în C#.
 
 ---
-
-**Succes și distracție plăcută! 🎉**
