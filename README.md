@@ -1,87 +1,85 @@
-# 🎮 Atestat – Joc Breakout în C# (Windows Forms)
+# 🎮 Final Project – Breakout Game in C# (Windows Forms)
 
-**Breakout** este un joc arcade clasic, creat ca proiect de atestat folosind C# și Windows Forms. Jucătorul controlează o paletă pentru a respinge o bilă și a sparge blocurile de pe ecran. Obiectivul este să distrugi toate blocurile fără să scapi bila.
-
----
-
-## 🧩 Caracteristici
-
-- Mișcare lină a paletei (stânga/dreapta).
-- 3 rânduri a câte 5 blocuri (în total 15 blocuri).
-- Blocuri colorate aleatoriu.
-- Sistem de scor dinamic.
-- Mesaje de câștig/pierdere.
-- Pauză și reluare.
-- Control exclusiv din tastatură.
+**Breakout** is a classic arcade game, created as a final school project using C# and Windows Forms. The player controls a paddle to bounce a ball and break the blocks on the screen. The objective is to destroy all blocks without letting the ball fall.
 
 ---
 
-## 📺 Interfață grafică
+## 🧩 Features
 
-Componenta UI este compusă din:
-
-- `Label txtScor`: Afișează scorul și mesajele jocului.
-- `PictureBox jucator`: Reprezintă paleta controlată de jucător.
-- `PictureBox bila`: Bila de joc care ricoșează în blocuri și paletă.
-- `Timer timerjoc`: Controlează mișcarea bilei și logica jocului la fiecare 20 ms.
-
-Fereastra are dimensiunea fixă `1207 x 704` pixeli, fundal negru și este controlată exclusiv din tastatură.
-
----
-
-## 🎮 Controale
-
-| Tastă        | Funcție                             |
-|--------------|--------------------------------------|
-| ⬅️ / A       | Mută paleta la stânga               |
-| ➡️ / D       | Mută paleta la dreapta              |
-| ⏸ P         | Pune jocul pe pauză                 |
-| ⏎ Enter     | Pornește / Continuă jocul           |
-| ⎋ Escape    | Iese din joc                         |
+- Smooth paddle movement (left/right).
+- 3 rows of 5 blocks each (total of 15 blocks).
+- Randomly colored blocks.
+- Dynamic scoring system.
+- Win/Lose messages.
+- Pause and resume functionality.
+- Keyboard-only controls.
 
 ---
 
-## 🎯 Obiectiv
+## 📺 User Interface
 
-- Fiecare bloc spart adaugă 1 punct la scor.
-- La 15 puncte: mesaj intermediar de câștig.
-- La 30 puncte: mesaj final de câștig – ai spart toate blocurile!
-- Dacă bila cade sub paletă: joc pierdut.
+The UI consists of the following components:
 
----
+- `Label txtScor`: Displays the score and game messages.
+- `PictureBox jucator`: The paddle controlled by the player.
+- `PictureBox bila`: The ball that bounces off the paddle and blocks.
+- `Timer timerjoc`: Controls ball movement and game logic every 20 ms.
 
-## 🧠 Logica jocului (Rezumat)
-
-- Bila se mișcă automat în diagonală, ricoșând în margini și în paletă.
-- Coliziunile cu paleta și blocurile modifică direcția și viteza bilei.
-- Blocurile sunt distruse la contact, fiind eliminate din fereastră.
-- Când jocul se termină (win/loss), jucătorul poate apăsa Enter pentru restart.
+The window has a fixed size of `1207 x 704` pixels, black background, and is fully controlled by the keyboard.
 
 ---
 
-## ▶️ Cum se rulează
+## 🎮 Controls
 
-1. Deschide soluția în **Visual Studio**.
-2. Asigură-te că rulezi pe **.NET Framework** (4.x).
-3. Apasă `F5` sau `Start` pentru a rula jocul.
-4. Joacă folosind tastatura.
+| Key         | Function                          |
+|-------------|-----------------------------------|
+| ⬅️ / A       | Move paddle to the left           |
+| ➡️ / D       | Move paddle to the right          |
+| ⏸ P         | Pause the game                    |
+| ⏎ Enter     | Start / Resume the game           |
+| ⎋ Escape    | Exit the game                     |
 
 ---
 
-## 📂 Structura proiectului
+## 🎯 Objective
+
+- Each broken block adds 1 point to the score.
+- At 15 points: intermediate win message.
+- At 30 points: final win message – all blocks are broken!
+- If the ball falls below the paddle: game over.
+
+---
+
+## 🧠 Game Logic (Summary)
+
+- The ball moves diagonally and bounces off the walls and paddle.
+- Collisions with the paddle and blocks change the ball's direction and speed.
+- Blocks are destroyed on contact and removed from the window.
+- When the game ends (win/loss), the player can press Enter to restart.
+
+---
+
+## ▶️ How to Run
+
+1. Open the solution in **Visual Studio**.
+2. Make sure you're targeting **.NET Framework** (4.x).
+3. Press `F5` or click `Start` to run the game.
+4. Use the keyboard to play.
+
+---
+
+## 📂 Project Structure
 
 ```
 Breakoutio/
-├── Form1.cs                # Logica principală a jocului
-├── Form1.Designer.cs       # Interfața grafică
-├── Program.cs              # Punctul de pornire al aplicației
-├── Breakoutio.csproj       # Fișierul proiectului Visual Studio
+├── Form1.cs                # Main game logic
+├── Form1.Designer.cs       # Graphical interface
+├── Program.cs              # Application entry point
+├── Breakoutio.csproj       # Visual Studio project file
 ```
 
 ---
 
-## 🛠️ Creat pentru
+## 🛠️ Created For
 
-Acest proiect a fost realizat ca parte a **atestatului la informatică** și este ideal pentru a învăța elemente de bază ale programării orientate pe evenimente și ale interfeței grafice în C#.
-
----
+This project was developed as part of a **final computer science exam** and is ideal for learning the basics of event-driven programming and graphical interfaces in C#.
