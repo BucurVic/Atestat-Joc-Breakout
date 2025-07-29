@@ -1,4 +1,4 @@
-# 🎮 Atestat Breakoutio – Joc Breakout în C# (Windows Forms)
+# 🎮 Atestat – Joc Breakout în C# (Windows Forms)
 
 **Breakoutio** este un joc arcade clasic tip *Breakout*, creat ca proiect de atestat folosind C# și Windows Forms. Jucătorul controlează o paletă pentru a respinge o bilă și a sparge blocurile de pe ecran. Obiectivul este să distrugi toate blocurile fără să scapi bila.
 
